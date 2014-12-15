@@ -446,7 +446,7 @@ static void redisSubmit_ ## value_type(const char* hostname, const char *plugin_
   vl.values = values; \
   vl.values_len = 1; \
   sstrncpy(vl.host, hostname, sizeof(vl.host)); \
-  sstrncpy(vl.plugin, type, sizeof(vl.plugin)); \
+  sstrncpy(vl.plugin, "redis", sizeof(vl.plugin)); \
   if(plugin_instance) sstrncpy(vl.plugin_instance, plugin_instance, sizeof(vl.plugin_instance)); \
   sstrncpy(vl.type, type, sizeof(vl.type)); \
   if(type_instance) sstrncpy(vl.type_instance, type_instance, sizeof(vl.type_instance)); \
